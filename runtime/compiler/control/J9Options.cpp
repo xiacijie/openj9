@@ -1968,6 +1968,8 @@ J9::Options::fePreProcess(void * base)
    // samplingJProfiling is disabled globally. It will be enabled on a method by
    // method basis based on selected heuristic
    self()->setDisabled(OMR::samplingJProfiling, true);
+   // Disable OWL by default 
+   self()->setDisabled(OMR::OWL, true);
 
 #if defined (TR_HOST_S390)
    // Disable lock reservation due to a functional problem causing a deadlock situation in an ODM workload in Java 8

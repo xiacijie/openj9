@@ -41,7 +41,13 @@ PRODUCT_INCLUDES=\
     $(J9SRC)/jit_vm \
     $(J9SRC)/nls \
     $(J9SRC)/oti \
-    $(J9SRC)/util
+    $(J9SRC)/util 
+
+# For OWL 
+PRODUCT_INCLUDES += \
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/include \
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/include/darwin
+
 
 PRODUCT_DEFINES+=\
     BITVECTOR_BIT_NUMBERING_MSB \
@@ -73,7 +79,11 @@ PRODUCT_RELEASE?=tr.open.java
 PRODUCT_NAME?=j9jit$(J9_VERSION)
 
 PRODUCT_LIBPATH=$(J9SRC) $(J9SRC)/lib
-PRODUCT_SLINK=$(J9LIBS) $(J9LIBS)
+#OWL
+PRODUCT_LIBPATH+= \
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/jli \
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/server
+PRODUCT_SLINK=$(J9LIBS) $(J9LIBS) jvm jli #OWL
 
 # Optional project-specific settings
 -include $(JIT_MAKE_DIR)/toolcfg/common-extra.mk

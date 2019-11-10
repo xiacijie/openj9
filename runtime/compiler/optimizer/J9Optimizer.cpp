@@ -74,6 +74,7 @@
 #include "optimizer/JProfilingBlock.hpp"
 #include "optimizer/JProfilingValue.hpp"
 #include "optimizer/JProfilingRecompLoopTest.hpp"
+#include "optimizer/OWL.hpp"
 #include "runtime/J9Profiler.hpp"
 #include "optimizer/UnsafeFastPath.hpp"
 #include "optimizer/VarHandleTransformer.hpp"
@@ -642,6 +643,7 @@ static const OptimizationStrategy *j9CompilationStrategies[] =
 static const OptimizationStrategy cheapWarmStrategyOpts[] =
    {
    { OMR::trivialDeadTreeRemoval,                    OMR::IfEnabled                  },
+   { OMR::OWL                          },
    { OMR::coldBlockOutlining                                                    },
    { OMR::stringBuilderTransformer                                              },
    { OMR::stringPeepholes                                                       }, // need stringpeepholes to catch bigdecimal patterns

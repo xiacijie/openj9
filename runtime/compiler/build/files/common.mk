@@ -238,6 +238,15 @@ JIT_PRODUCT_BACKEND_SOURCES+=\
     omr/compiler/optimizer/VPConstraint.cpp \
     omr/compiler/optimizer/VPHandlers.cpp \
     omr/compiler/optimizer/VPHandlersCommon.cpp \
+    omr/compiler/optimizer/OWL.cpp \
+    omr/compiler/optimizer/OWLJNIConfig.cpp \
+    omr/compiler/optimizer/OWLJNIClient.cpp \
+    omr/compiler/optimizer/OWLMapper.cpp \
+    omr/compiler/optimizer/OWLShrikeBTConstructor.cpp \
+    omr/compiler/optimizer/OWLTypes.cpp \
+    omr/compiler/optimizer/OWLSerializer.cpp \
+    omr/compiler/optimizer/OWLDeserializer.cpp \
+    omr/compiler/optimizer/OWLAnalyser.cpp \
     omr/compiler/ras/CallStack.cpp \
     omr/compiler/ras/CFGChecker.cpp \
     omr/compiler/ras/Debug.cpp \
