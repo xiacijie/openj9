@@ -247,6 +247,7 @@ JIT_PRODUCT_BACKEND_SOURCES+=\
     omr/compiler/optimizer/OWLSerializer.cpp \
     omr/compiler/optimizer/OWLDeserializer.cpp \
     omr/compiler/optimizer/OWLAnalyser.cpp \
+    omr/compiler/optimizer/OWLVerifier.cpp \
     omr/compiler/ras/CallStack.cpp \
     omr/compiler/ras/CFGChecker.cpp \
     omr/compiler/ras/Debug.cpp \
